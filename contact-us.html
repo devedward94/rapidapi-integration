@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/basic/favicon.ico" type="image/x-icon">
+    <title>Dashborad</title>
+    <!-- App CSS -->
+    <link rel="stylesheet" href="assets/css/app.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F5F8FA;
+            z-index: 9998;
+            text-align: center;
+        }
+
+        .plane-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+<body class="light">
+
+<!-- Pre loader -->
+<div id="loader" class="loader">
+    <div class="plane-container">
+        <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="app">
+
+    <!-- Top Header -->
+    <div class="main-header text-white">        
+        <h4>
+            <a href="#" data-toggle="push-menu" class="paper-nav-toggle pp-nav-toggle"><i></i></a>
+            <span><i class="icon-box"></i><a href="index.html">Dashboard</a></span>
+        </h4>
+        <div class="right-top">
+            <ul class="top-nav">
+                <li><a href="contact-us.html" type="button" class="btn btn-primary btn-sm">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.Top Header -->
+
+    <!-- Left SideBar -->
+    <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
+        <section class="sidebar">
+            <!-- SideBar Headers -->
+            <div class="dateBar">Pre Made Filters</div>
+            <div class="sidebadges">
+                <a class="badge r-3 badge-success pull-right" href="#">Win</a>
+                <a href="#" class="badge r-3 badge-primary pull-right">BTTS</a>
+                <a href="#" class="badge badge-danger">Cards</a>
+            </div>
+            <div class="asideDate">
+                <div class="card-title">Date Picker</div>
+                <div class="input-group">
+                    <div class="date-items">
+                        <input type="text" class="date-time-picker form-control" data-options='{"timepicker":false, "format":"d-m-Y"}' value="2018/06/01"/>
+                        <img src="assets/img/arrow.png" alt="">
+                        <input type="text" class="date-time-picker form-control" data-options='{"timepicker":false, "format":"d-m-Y"}' value="2018/06/01"/>
+                    </div>
+                    <span class="input-group-append">
+                        <span class="input-group-text add-on white">
+                            <i class="icon-calendar"></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <!-- /.SideBar Headers -->
+
+
+            <!-- Ranges -->
+            <div class="ranges-outer">
+                <!-- Range 1 -->
+                <div class="ranges">
+                    <div class="ranges-head">
+                        <span class="rng-head">Home Team Filters</span>
+                    </div>
+                    <!-- Range Row Repeat -->
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <!-- /.Range Row Repeat -->
+                </div>
+                <!-- /.Range 1 -->
+
+                <!-- Range 2 -->
+                <div class="ranges">
+                    <div class="ranges-head">
+                        <span class="rng-head">Home Team Filters</span>
+                    </div>
+                    <!-- Range Row Repeat -->
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>                
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <form class="form-inline range-row">
+                        <div class="rng-item">
+                            <input type="text" class="range-slider form-control" />
+                        </div>          
+                        <div class="rng-item">
+                            <div class="range-text">wins at home</div>
+                        </div>      
+                    </form>
+                    <!-- /.Range Row Repeat -->
+                </div>
+                <!-- /.Range 2 -->
+            </div>
+            <!-- /.Ranges -->
+
+        </section>
+    </aside>
+    <!-- /.Left SideBar -->
+
+    <!-- Content Main -->
+    <div class="page has-sidebar-left height-full contact">
+    
+        <div class="container-fluid relative animatedParent animateOnce">
+
+            <div class="dateBar">Contact</div>
+
+            <div class="bread-link">
+                <a class="" href="index.html">Back to home</a>
+            </div>
+
+            <!-- Basic Validation -->
+            <div class="card mb-3 shadow no-b r-0">
+                <div class="card-header white">
+                    <h6>Send us your enquiries</h6>
+                </div>
+                <div class="card-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-12">
+                                <label for="validationCustom01">Name</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="Enter your name" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-12">
+                                <label for="validationCustom01">Phone</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="Enter your Phone" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-12">
+                                <label for="validationCustom01">Email address</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="Enter email" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-12">
+                                <label for="validationCustom01">Your Message</label>
+                                <textarea  class="form-control" name="" id=""></textarea>
+                                <div class="text">We'll never share yoyr email with anyone else</div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="end-btns">
+                            <div class="form-row">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                                <button class="btn btn-primary btn trns" type="submit">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                        (function() {
+                            'use strict';
+                            window.addEventListener('load', function() {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function(form) {
+                                    form.addEventListener('submit', function(event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                });
+                            }, false);
+                        })();
+                    </script>
+                </div>
+            </div>
+            <!-- #END# Basic Validation -->
+
+        </div>
+    </div>
+    <!-- /.Content Main -->    
+
+    <!--Message Modal-->
+<div class="modal modal-center fade" id="modalCreateMessage" tabindex="-1" role="dialog" aria-labelledby="modalCreateMessage">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content b-0">
+            <div class="modal-header r-0 bg-primary">
+                <h6 class="modal-title text-white" id="exampleModalLabel"><img src="assets/img/flags/Egypt.png" alt="">Egypt: Premier League (tier 1)</h6>
+                <a href="#" data-dismiss="modal" aria-label="Close"
+                   class="paper-nav-toggle paper-nav-white active"><i></i></a>
+            </div>
+
+            <div class="modal-mid-row">
+                <div class="title-board">
+                    <span><img src="assets/img/clubs/club-img1-lg.png" alt=""><b>Chennaiyin</b></span>
+                    <button type="button" class="btn btn-success btn-sm">1 - 1</button>
+                    <span><b>NorthEast United</b><img src="assets/img/clubs/club-img2-lg.png" alt=""></span>
+                </div>
+                <div class="timeboard">
+                    <b>Start date: 08. Jan 2020, <span class="badge badge-danger">19:00</span></b>
+                </div>
+            </div>
+
+            <div class="modal-body no-p no-b">
+               <div class="list-main-chart">
+                    <div class="listDeatil">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><div class="colorhead">Name head</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 4</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td><div class="colorhead">Away Team</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 0</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>10.0</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 25px;"></div><div class="tdSpan halfSpan" style="width: 25px;"></div></span></td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="listChar">
+                        <div id="echart_mini_pie" style="width:300px;min-width:300px; max-width:300px; height:370px;"></div>
+                    </div>
+                    <div class="listDeatil">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><div class="colorhead">Name head</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 4</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td><div class="colorhead">Away Team</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 0</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>10.0</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 25px;"></div><div class="tdSpan halfSpan" style="width: 25px;"></div></span></td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="list-main-chart">
+                    <div class="listDeatil">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><div class="colorhead">Name head</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 4</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td><div class="colorhead">Away Team</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 0</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>10.0</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 25px;"></div><div class="tdSpan halfSpan" style="width: 25px;"></div></span></td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="listDeatil">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><div class="colorhead">Name head</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 4</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="listDeatil">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><div class="colorhead">Name head</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2 item name</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 4</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td><div class="colorhead">Away Team</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                    <td><div class="colorhead">-</div></td>
+                                </tr>
+                                <tr>
+                                    <td>list item 0</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 50px;"></div><div class="tdSpan halfSpan" style="width: 0px;"></div></span></td>
+                                    <td>10.0</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 3</td>
+                                    <td><span><div class="tdSpan blueSpan" style="width: 25px;"></div><div class="tdSpan halfSpan" style="width: 25px;"></div></span></td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 1</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>list item 2</td>
+                                    <td><span><div class="tdSpan greySpan" style="width: 50px;"></div></span></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+<!--/#app -->
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
